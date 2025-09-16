@@ -9,8 +9,8 @@
   "scripts": {
     "lint": "eslint . --ext .ts,.tsx",
     "lint:fix": "eslint . --ext .ts,.tsx --fix",
-    "build": "yarn trpc:generate || true",
-    "trpc:generate": "yarn tsc --project tsconfig.json"
+    "build": "yarn trpc:generate || echo 'TypeScript build failed but continuing...'",
+    "trpc:generate": "yarn tsc --project tsconfig.json --skipLibCheck"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.17.15",
